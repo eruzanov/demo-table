@@ -9,20 +9,20 @@
 <body>
 <div class="app-container">
     <div class="header">
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-danger">Danger</button>
 
-        <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action <span class="caret"></span>
+        <div class="btn-group pull-right">
+            <button class="btn btn-default" data-toggle="modal" data-target="#table-config">
+                <span class="glyphicon glyphicon-cog"></span>
+                Конфигурация таблицы
+            </button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Сохраненная конфигурация - 1</a></li>
+                <li><a href="#">Сохраненная конфигурация - 2</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li class="active"><a href="#">По умолчанию</a></li>
             </ul>
         </div>
     </div>
@@ -35,13 +35,34 @@
                         <input data-ui="master-checkbox" type="checkbox">
                     </label>
                 </th>
-                <th>Table heading - 1</th>
-                <th>Table heading - 2</th>
-                <th>Table heading - 3</th>
-                <th>Table heading - 4</th>
-                <th>Table heading - 5</th>
-                <th>Table heading - 6</th>
-                <th>Table heading - 7</th>
+                <th>
+                    Table heading - 1
+                    <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+                </th>
+                <th>
+                    Table heading - 2
+                    <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+                </th>
+                <th>
+                    Table heading - 3
+                    <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+                </th>
+                <th>
+                    Table heading - 4
+                    <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+                </th>
+                <th>
+                    Table heading - 5
+                    <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+                </th>
+                <th>
+                    Table heading - 6
+                    <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+                </th>
+                <th>
+                    Table heading - 7
+                    <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -366,19 +387,499 @@
                 </a>
             </li>
         </ul>
+        <div class="pull-right">
+            <span>Showing 1 to 15 of 75 rows</span>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    15 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="active"><a href="#">15</a></li>
+                    <li><a href="#">25</a></li>
+                    <li><a href="#">50</a></li>
+                    <li><a href="#">100</a></li>
+                </ul>
+            </div>
+            <span>rows per page</span>
+        </div>
     </div>
 </div>
 <div class="side-menu">
     <div class="header">РАСЧЁТНЫЙ ЦЕНТР</div>
     <a href="/index/logout" class="footer log-out"><span class="glyphicon glyphicon-log-out"></span>Выход</a>
 </div>
+<div class="modal fade" id="table-config" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Конфигурация таблицы</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            Сохраненная конфигурация - 1
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                            Сохраненная конфигурация - 2
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <form class="form-inline" style="margin: 20px 0">
+                            <div class="form-group">
+                                <label>Название</label>
+                                <input type="text" class="form-control" style="width: 400px"
+                                       placeholder="untitled" value="Сохраненная конфигурация - 1">
+                            </div>
+                            <a href="#" class="btn pull-right">
+                                <span class="glyphicon glyphicon-trash text-danger"></span>
+                                <span class="text-danger">Удалить конфигурацию</span>
+                            </a>
+                        </form>
+                        <div class="list-group" style="margin-bottom: 0;">
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 1
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 2
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 3
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 4
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 5
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 6
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 7
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <form class="form-inline" style="margin: 20px 0">
+                            <div class="form-group">
+                                <label>Название</label>
+                                <input type="text" class="form-control" style="width: 400px"
+                                       placeholder="untitled" value="Сохраненная конфигурация - 2">
+                            </div>
+                            <a href="#" class="btn pull-right">
+                                <span class="glyphicon glyphicon-trash text-danger"></span>
+                                <span class="text-danger">Удалить конфигурацию</span>
+                            </a>
+                        </form>
+                        <div class="list-group" style="margin-bottom: 0;">
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 1
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 2
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 3
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 4
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 5
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 6
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 7
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <form class="form-inline" style="margin: 20px 0">
+                            <div class="form-group">
+                                <label>Название</label>
+                                <input type="text" class="form-control" style="width: 400px" placeholder="untitled">
+                            </div>
+                            <a href="#" class="btn pull-right">
+                                <span class="glyphicon glyphicon-trash text-danger"></span>
+                                <span class="text-danger">Удалить конфигурацию</span>
+                            </a>
+                        </form>
+                        <div class="list-group" style="margin-bottom: 0;">
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 1
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 2
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 3
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 4
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 5
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 6
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">
+                                    <label class="list-group-item-text">
+                                        <input type="checkbox" value="">
+                                    </label>
+                                    Table heading - 7
+                                </h4>
+                                <form class="form-inline list-group-item-text">
+                                    <div class="form-group" style="margin-right: 20px">
+                                        <label style="margin-right: 10px">Условие сравнения</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Значение фильтра</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary">Применить</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="node_modules/sticky-table-headers/js/jquery.stickytableheaders.min.js"></script>
+<script src="node_modules/sortablejs/Sortable.min.js"></script>
 <script>
-    $(() => {
-      $('table').stickyTableHeaders({scrollableArea: $('#app')});
-    });
+  $(() => {
+    $('table').stickyTableHeaders({scrollableArea: $('#app')});
+    const lists = Array.from(document.querySelectorAll('.list-group'));
+    lists.forEach((list) => Sortable.create(list));
+  });
 </script>
+<!--<script src="bundle.js"></script>-->
 </body>
 </html>
